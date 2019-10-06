@@ -71,6 +71,7 @@ form.addEventListener('submit', e => {
                 school,
                 gender,
                 year,
+                verified: false,
                 reg_number: regnumber
             }
             db.collection('student-cards')
