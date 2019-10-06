@@ -2,24 +2,14 @@ const logout_btn = document.querySelector('.logout');
 const cards_list = document.querySelector('.cards-list');
 
 const delete_card = number => {
-    // db.collection('student-cards')
-    //     .where('reg_number', '=', id)
-    //     .get()
-    //     .then(snaps => {
-    //         snaps.forEach(snap => {
-    //             const data = snap.data();
-    //             console.log(data);
-    //         })
-    //     })
-    //     .catch(console.log)
     console.log(number);
 }
 
 console.log('[check-auth.js] working...', );
 logout_btn.addEventListener('click', e => {
     firebase.auth().signOut();
-    // location.href = '/student-card-management/management-login.html';
-    location.href = '/management-login.html';
+    location.href = '/student-card-management/management-login.html';
+    // location.href = '/management-login.html';
 });
 
 db.collection('student-cards')
@@ -32,7 +22,7 @@ db.collection('student-cards')
         html = html + `
             <tr class = "student-card">
                 <th> ${card.reg_number} </th>
-                <td> <a href="/personal.html?id=${card.reg_number}">${card.firstname} ${card.lastname}</a> </td>
+                <td> <a href="/student-card-management/personal.html?id=${card.reg_number}">${card.firstname} ${card.lastname}</a> </td>
                 <td> ${card.created_at} </td>
                 <!-- <td> <i class = "fa fa-trash-o text-danger" onClick = "() => delete_card(${card})" > </i> </td> -->
             </tr>

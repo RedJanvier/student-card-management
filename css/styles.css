@@ -83,8 +83,8 @@ input[type="email"],
 input[type="password"],
 input[type="text"] {
     display: block;
-    /* width: 100%; */
-    max-width: 500px;
+    width: 100%;
+    max-width: 300px;
     padding: 10px;
     font-size: 14px;
     border: 2px solid #222;
