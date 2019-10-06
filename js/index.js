@@ -1,6 +1,6 @@
 const form = document.querySelector('form');
+const loader = document.querySelector('.loader');
 const hide = (md) => {
-    const loader = document.querySelector('.loader');
     loader.style.display = 'none';
     setTimeout(() => {
         md.style.display = 'none';
@@ -71,15 +71,18 @@ form.addEventListener('submit', e => {
                 reg_number: regnumber
             }
             db.collection('student-cards')
-                .add(newCard)
-                .then(docRef => {
-                    form.reset();
-                    output.textContent = `doc created at ${docRef.id}`;
-                    setTimeout(() => {
-                        location.reload();
-                    },4000);
-                })
-                .catch(err => output.textContent = `error occurred ${err}`);
+            .add(newCard)
+            .then(docRef => {
+                form.reset();
+                loader.style.display = 'none';
+
+                output.textContent = `✔Done Uploading✔ Thank you for your contributions.`;
+
+                setTimeout(() => {
+                    location.reload();
+                }, 6000);
+            })
+            .catch(err => output.textContent = `error occurred ${err}`);
         });
     });
 
