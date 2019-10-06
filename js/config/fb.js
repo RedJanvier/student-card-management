@@ -15,3 +15,11 @@ firebase.analytics();
 const db = firebase.firestore();
 const storage = firebase.storage();
 const auth = firebase.auth();
+
+// auth.onAuthStateChange(user => {
+//     if (user) {
+//         location.href = '/management.html';
+//     } else {
+//         location.href = '/management-login.html';
+//     }
+// });

@@ -1,7 +1,8 @@
 const logout_btn = document.querySelector('.logout');
 
 logout_btn.addEventListener('click', e => {
-    auth.signout();
+    firebase.auth().signOut();
+    location.href = '/management-login.html';
 });
 
 // db.collection('student-cards')
