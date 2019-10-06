@@ -2,7 +2,7 @@ const logout_btn = document.querySelector('.logout');
 
 logout_btn.addEventListener('click', e => {
     firebase.auth().signOut();
-    location.href = '/management-login.html';
+    location.href = '/student-card-management/management-login.html';
 });
 
 // db.collection('student-cards')
