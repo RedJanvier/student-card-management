@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Submittion</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+	<div class="modal-wrapper">
+		<div class="my-modal">
+			<div class="upload">
+				<p class="output">uploading...</p>
+			</div>
+			<div class="loader">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<header>
+			<h1><i class="fa fa-home"></i>Student Card Registration</h1>
+		</header>
+		<form>
+			<div class="row">
+				<div class="col s12 m6">
+					<input required type="text" name="firstname" placeholder="Firstname" />
+				</div>
+				<div class="col s12 m5">
+					<input required type="text" name="lastname" placeholder="Lastname" />
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col s12 m6">
+						<label for="gender">Choose your gender: </label> <br>
+						<input required type="radio" name="gender" value="male"> Male<br>
+						<input required type="radio" name="gender" value="female"> Female<br>
+						<br>
+						<label for="profile">Add a photo: </label> <br>
+						<input required type="file" name="profile" accept="image/*" data-multiple-caption="1 files selected" /> <br>
+						<span class="file-input-add"> <i class="fa fa-plus"></i></span> <br>
+					</div>
+					<div class="col s12 m6">
+						<label for="school">Choose your school: </label><br>
+						<div class="container">
+							<input required type="radio" name="school"> SCIENCE <br>
+							<input required type="radio" name="school"> ENGINEERING <br>
+							<input required type="radio" name="school"> ARCHITECTURE <br>
+							<input required type="radio" name="school"> COMPUTER SCIENCE <br>
+						</div>
+						<br>
+						<label for="program">Which Program? </label>
+						<select name="program">
+							<option value="" disabled>Select your program</option>
+							<option value="ete">Electronics & Telecommunication Eng.</option>
+							<option value="cve">Civil Eng.</option>
+							<option value="cse">Computer Science Eng.</option>
+							<option value="mce">Mechanical Eng.</option>
+						</select>
+						<label for="year">What is your year of study? </label><br>
+						<select name="year">
+							<option value="y1"> YEAR 1</option>
+							<option value="y2"> YEAR 2</option>
+							<option value="y3"> YEAR 3</option>
+							<option value="y4"> YEAR 4</option>
+							<option value="y5" disabled> YEAR 5</option>
+							<option value="y6" disabled> YEAR 6</option>
+						</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12">
+						<input required type="number" name="reg_number" placeholder="Enter your Registration number">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12">
+						<input class="btn btn-dark btn-lg btn-block" type="submit" value="Submit">
+					</div>
+				</div>	
+			</div>
+		</form>
+	</div>
+	<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-storage.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-analytics.js"></script>
+	<script src="./js/config/fb.js"></script>
+	<script src="./js/check-auth.js"></script>
+	<script src="./js/index.js"></script>
+</body>
+</html>
