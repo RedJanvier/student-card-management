@@ -1,6 +1,20 @@
 const logout_btn = document.querySelector('.logout');
 const cards_list = document.querySelector('.cards-list');
 
+const delete_card = number => {
+    // db.collection('student-cards')
+    //     .where('reg_number', '=', id)
+    //     .get()
+    //     .then(snaps => {
+    //         snaps.forEach(snap => {
+    //             const data = snap.data();
+    //             console.log(data);
+    //         })
+    //     })
+    //     .catch(console.log)
+    console.log(number);
+}
+
 console.log('[check-auth.js] working...', );
 logout_btn.addEventListener('click', e => {
     firebase.auth().signOut();
@@ -9,19 +23,22 @@ logout_btn.addEventListener('click', e => {
 });
 
 db.collection('student-cards')
-.get()
-.then(snaps => {
+.onSnapshot(snaps => {
     let html;
+    const cards = [];
     snaps.forEach(snap => {
         const card = snap.data();
+        cards.push(card);
         html = html + `
             <tr class = "student-card">
                 <th> ${card.reg_number} </th>
-                <td> ${card.firstname} ${card.lastname} </td>
+                <td> <a href="/personal.html?id=${card.reg_number}">${card.firstname} ${card.lastname}</a> </td>
                 <td> ${card.created_at} </td>
+                <!-- <td> <i class = "fa fa-trash-o text-danger" onClick = "() => delete_card(${card})" > </i> </td> -->
             </tr>
         `;
     });
+    localStorage.setItem('cards', JSON.stringify(cards));
     cards_list.innerHTML = html;
 })
 .catch(console.log);
