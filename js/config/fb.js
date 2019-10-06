@@ -18,8 +18,8 @@ const auth = firebase.auth();
 
 // auth.onAuthStateChange(user => {
 //     if (user) {
-//         location.href = '/management.html';
+//         location.href = '/student-card-management/management.html';
 //     } else {
-//         location.href = '/management-login.html';
+//         location.href = '/student-card-management/management-login.html';
 //     }
 // });
