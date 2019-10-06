@@ -16,10 +16,14 @@ login_form.addEventListener('submit', e => {
     const password = login_form.password.value;
 
     auth.signInWithEmailAndPassword(email, password)
+<<<<<<< HEAD
     .then(() => {
         // location.href = '/student-card-management/management.html';
         location.href = '/management.html';
     })
+=======
+    .then(() => location.href = '/student-card-management/management.html')
+>>>>>>> 39f8df1533d4c6e4aa015bb6c02cfd13f2fc1207
     .catch(err => {
         const errorMessage = err.message;
         disp_error(errorMessage);
