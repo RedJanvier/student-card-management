@@ -5,9 +5,10 @@ const delete_card = number => {
     console.log(number);
 }
 
-console.log('[check-auth.js] working...', );
 logout_btn.addEventListener('click', e => {
+
     firebase.auth().signOut();
+    localStorage.clear();
     location.href = '/student-card-management/management-login.html';
     // location.href = '/management-login.html';
 });
