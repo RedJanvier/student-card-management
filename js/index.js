@@ -8,8 +8,11 @@ const hide = (md) => {
 }
 form.addEventListener('submit', e => {
     e.preventDefault();
+
     const modal = document.querySelector('.modal-wrapper');
     modal.style.display = 'block';
+    scrollTo(0,0);
+
     const output = document.querySelector('.upload > .output');
     const fname = form.firstname.value;
     const lname = form.lastname.value;
