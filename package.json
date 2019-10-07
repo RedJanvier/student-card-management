@@ -1,0 +1,22 @@
+{
+  "name": "student-card-management",
+  "version": "1.0.0",
+  "description": "This is a system I designed for Paulin which design print ready student cards. It gets all the data from the student and store them in firebase firestore and use firebase storage for media storage.",
+  "main": "index.html",
+  "scripts": {
+    "deploy": "gh-pages -d public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RedJanvier/student-card-management.git"
+  },
+  "keywords": [
+    "student-card"
+  ],
+  "author": "RedJanvier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RedJanvier/student-card-management/issues"
+  },
+  "homepage": "https://github.com/RedJanvier/student-card-management#readme"
+}
