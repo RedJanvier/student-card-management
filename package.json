@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/RedJanvier/student-card-management/issues"
   },
-  "homepage": "https://github.com/RedJanvier/student-card-management#readme"
+  "homepage": "https://github.com/RedJanvier/student-card-management#readme",
+  "devDependencies": {
+    "prettier": "^2.0.2"
+  }
 }
