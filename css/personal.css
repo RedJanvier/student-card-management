@@ -1,0 +1,47 @@
+.delete1 {
+  background: white;
+  height: 150px;
+  width: 800px;
+  padding: 2em;
+  position: absolute;
+  top: 270px;
+  left: 60px;
+}
+.delete2 {
+  background: white;
+  height: 120px;
+  width: 130px;
+  padding: 1em;
+  position: absolute;
+  top: 235px;
+  left: 500px;
+}
+.student-card {
+  position: absolute;
+  top: 280px;
+  left: 70px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.student-card .image {
+  width: 160px;
+  height: 160px;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.student-card img {
+  width: 120%;
+  height: auto;
+}
+
+.student-card p:nth-child(1) {
+  width: 200px;
+}
+
+.student-card .card-content {
+  width: 400px;
+  margin-left: 30px;
+  font-size: 14px;
+}

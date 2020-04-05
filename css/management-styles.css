@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #eee;
+}
+
+.msg_box .error {
+  color: crimson;
+  background: rgb(255, 194, 206);
+  padding: 6px;
+  border-radius: 6px;
+  transition: ease-in;
+  border: 1px solid crimson;
+}

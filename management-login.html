@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Management - Login</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <style>
+      input {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        max-width: 1000px !important;
+        margin: 10px auto !important;
+      }
+      .container {
+        padding: 20px;
+        padding-bottom: 8em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <header>
+          <h1>Management - login</h1>
+        </header>
+      </div>
+      <div class="msg_box"></div>
+      <form class="login">
+        <div class="row">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+          <br />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Enter your Password"
+            required
+          />
+          <br />
+          <br />
+        </div>
+        <div class="row">
+          <input
+            class="btn btn-dark btn-lg btn-block"
+            type="submit"
+            value="Login"
+          />
+          <br />
+        </div>
+      </form>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-analytics.js"></script>
+    <script src="./js/config/fb.js"></script>
+    <script src="./js/management.js"></script>
+  </body>
+</html>
