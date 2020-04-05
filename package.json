@@ -4,7 +4,7 @@
   "description": "This is a system I designed for Paulin which design print ready student cards. It gets all the data from the student and store them in firebase firestore and use firebase storage for media storage.",
   "main": "index.html",
   "scripts": {
-    "deploy": "gh-pages -d public",
+    "deploy": "gh-pages -d public --branch master",
     "lint": "eslint **/*.js"
   },
   "repository": {
@@ -22,6 +22,7 @@
   "homepage": "https://github.com/RedJanvier/student-card-management#readme",
   "devDependencies": {
     "eslint": "^6.8.0",
+    "gh-pages": "^2.2.0",
     "prettier": "^2.0.2"
   }
 }
