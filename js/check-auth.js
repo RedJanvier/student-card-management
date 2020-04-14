@@ -24,7 +24,7 @@ db.collection('student-cards')
         `
             <tr class = "student-card">
                 <th> ${card.reg_number} </th>
-                <td> <a href="/student-card-management/personal.html?id=${card.reg_number}">${card.firstname} ${card.lastname}</a> </td>
+                <td> <a href="./personal.html?id=${card.reg_number}">${card.firstname} ${card.lastname}</a> </td>
                 <td> ${card.created_at} </td>
                 <!-- <td> <i class = "fa fa-trash-o text-danger" onClick = "() => delete_card(${card})" > </i> </td> -->
             </tr>
